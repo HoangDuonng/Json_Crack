@@ -56,7 +56,7 @@ export const Toolbar = () => {
       </Group>
       <Group gap="xs" justify="right" w="100%" style={{ flexWrap: "nowrap" }}>
         <ThemeToggle />
-        <Link href="https://github.com/AykutSarac/jsoncrack.com" rel="noopener" target="_blank">
+        <Link href="https://github.com/HoangDuonng" rel="noopener" target="_blank">
           <StyledToolElement title="GitHub">
             <FaGithub size="20" />
           </StyledToolElement>
