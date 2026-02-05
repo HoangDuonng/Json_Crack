@@ -130,31 +130,34 @@ export const HeroSection = ({ stars = 0 }) => {
           </StyledHeroText>
 
           <Flex gap="xs" wrap="wrap" justify="center" hiddenFrom="xs">
-            <Button
-              component="a"
-              color="#202842"
-              href="/editor"
-              size="md"
-              radius="md"
-              rightSection={<FaChevronRight />}
-              fw="500"
-              mt="sm"
-            >
-              Go to Editor
-            </Button>
+            <Link href="/editor">
+              <Button
+                component="a"
+                color="#202842"
+                size="md"
+                radius="md"
+                rightSection={<FaChevronRight />}
+                fw="500"
+                mt="sm"
+              >
+                Go to Editor
+              </Button>
+            </Link>
           </Flex>
           <Flex gap="lg" wrap="wrap" justify="center" visibleFrom="xs">
-            <Button
-              component="a"
-              color="#202842"
-              href="/editor"
-              size="xl"
-              radius="md"
-              rightSection={<FaChevronRight />}
-              mt="sm"
-            >
-              Go to Editor
-            </Button>
+            <Link href="/editor">
+              <Button
+                component="a"
+                color="#202842"
+                size="md"
+                radius="md"
+                rightSection={<FaChevronRight />}
+                fw="500"
+                mt="sm"
+              >
+                Go to Editor
+              </Button>
+            </Link>
           </Flex>
         </Stack>
       </StyledHeroSectionBody>
