@@ -39,3 +39,5 @@ npm-debug.log*
 **/public/sw.js
 **/public/fallback-*.js
 
+# ENV
+.env
