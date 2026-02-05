@@ -81,9 +81,9 @@ export const Banner = () => {
         >
           {BANNER_LIST[index]}{" "}
         </span>
-        <Button size="xs" color="gray">
+        {/* <Button size="xs" color="gray">
           Try now
-        </Button>
+        </Button> */}
         <ActionIcon
           onClick={handleDismiss}
           size="sm"

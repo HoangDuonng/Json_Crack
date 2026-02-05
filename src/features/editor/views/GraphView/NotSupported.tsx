@@ -87,7 +87,7 @@ export const NotSupported = () => {
           </Anchor>{" "}
           for larger diagrams and more features.
         </Text>
-        <ShiningButton style={{ marginTop: "16px", position: "relative" }}>
+        {/* <ShiningButton style={{ marginTop: "16px", position: "relative" }}>
           <Button
             component="a"
             href="https://todiagram.com/editor?utm_source=jsoncrack&utm_medium=data_limit"
@@ -99,7 +99,7 @@ export const NotSupported = () => {
           >
             Try now &rarr;
           </Button>
-        </ShiningButton>
+        </ShiningButton> */}
       </Stack>
     </Overlay>
   );

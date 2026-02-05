@@ -94,7 +94,7 @@ const EditorPage = () => {
         <ModalController />
         <StyledEditorWrapper>
           <StyledPageWrapper>
-            {process.env.NEXT_PUBLIC_DISABLE_EXTERNAL_MODE === "true" ? null : <Banner />}
+            {/* {process.env.NEXT_PUBLIC_DISABLE_EXTERNAL_MODE === "true" ? null : <Banner />} */}
             <Toolbar />
             <StyledEditorWrapper>
               <StyledEditor proportionalLayout={false}>
