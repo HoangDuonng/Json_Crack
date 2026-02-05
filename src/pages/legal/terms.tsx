@@ -12,9 +12,9 @@ const Terms = () => {
       <Head>
         {generateNextSeo({
           ...SEO,
-          title: "Terms of Service - JSON Crack",
-          description: "JSON Crack Terms of Service",
-          canonical: "https://jsoncrack.com/legal/terms",
+          title: "Terms of Service - JSON Crash",
+          description: "JSON Crash Terms of Service",
+          canonical: "https://nguuyen.io.vn",
         })}
       </Head>
       <Container my={50} size="md" pb="lg">

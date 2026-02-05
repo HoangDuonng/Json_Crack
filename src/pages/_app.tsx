@@ -81,12 +81,12 @@ function JsonCrack({ Component, pageProps }: AppProps) {
     <>
       <Head>{generateDefaultSeo(SEO)}</Head>
       <SoftwareApplicationJsonLd
-        name="JSON Crack"
+        name="JSON Crash"
         type="SoftwareApplication"
         operatingSystem="Browser"
         applicationCategory="DeveloperApplication"
         aggregateRating={{ ratingValue: 4.9, ratingCount: 19 }}
-        datePublished="2022-17-02"
+        datePublished="2026-05-02"
       />
       <MantineProvider
         colorSchemeManager={colorSchemeManager}
