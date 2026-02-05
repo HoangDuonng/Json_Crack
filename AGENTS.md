@@ -1,0 +1,217 @@
+# Agent Guidelines for JSON Crack
+
+This document provides guidelines for AI coding agents working in the JSON Crack codebase.
+
+## Project Overview
+
+JSON Crack is a Next.js application for visualizing and manipulating JSON data. It uses React 19, TypeScript, Zustand for state management, styled-components for styling, and Mantine v8 for UI components.
+
+## Build & Development Commands
+
+### Development
+```bash
+pnpm dev              # Start development server on http://localhost:3000
+pnpm build            # Build for production
+pnpm start            # Start production server
+```
+
+### Linting & Formatting
+```bash
+pnpm lint             # Run TypeScript check, ESLint, and Prettier
+pnpm lint:fix         # Auto-fix linting issues
+```
+
+### Testing
+**Note**: This project currently has no test suite. Do not attempt to run tests.
+
+### Other Commands
+```bash
+pnpm analyze          # Analyze bundle size
+```
+
+## Code Style Guidelines
+
+### TypeScript
+
+- **Strict mode enabled**: All TypeScript strict checks are enforced
+- **Type imports**: Always use `import type` for type-only imports (enforced by ESLint)
+  ```typescript
+  // ✅ Correct
+  import type { MenuItemProps } from "@mantine/core";
+  
+  // ❌ Wrong
+  import { MenuItemProps } from "@mantine/core";
+  ```
+- **No implicit any**: Avoid `any` types when possible (though `@typescript-eslint/no-explicit-any` is off)
+- **Type definitions**: Define interfaces for component props, store states, and function parameters
+
+### Import Order
+
+Imports must follow this specific order (enforced by Prettier plugin):
+1. React imports (`react`, `react/*`)
+2. Next.js imports (`next`, `next/*`)
+3. `@mantine/core`
+4. Other `@mantine` packages
+5. `styled-components`
+6. Third-party modules
+7. Internal `src/` imports
+8. Relative imports (`./`, `../`)
+
+Example:
+```typescript
+import React from "react";
+import Link from "next/link";
+import { Button, Menu } from "@mantine/core";
+import { useDebouncedValue } from "@mantine/hooks";
+import styled from "styled-components";
+import { toast } from "react-hot-toast";
+import useGraph from "src/features/editor/views/GraphView/stores/useGraph";
+import { isIframe } from "../lib/utils/helpers";
+```
+
+### Formatting Rules
+
+- **Quotes**: Double quotes only (`"`)
+- **Semicolons**: Required at end of statements
+- **Line width**: 100 characters maximum
+- **Trailing commas**: ES5 style (objects, arrays)
+- **Arrow function parens**: Avoid for single parameters (`x => x * 2`)
+- **Space in parens**: No spaces inside parentheses
+- **No multiple empty lines**: Keep code compact
+
+### Naming Conventions
+
+- **Components**: PascalCase (`Navbar`, `JSONCrackLogo`)
+- **Files**: 
+  - ComponentsalCase (`Navbar.tsx`, `HeroSection.tsx`)
+  - Utilities: camelCase (`helpers.ts`, `search.ts`)
+  - Hooks: camelCase with `use` prefix (`useFocusNode.ts`, `useFile.ts`)
+  - Stores: camelCase with `use` prefix (`useConfig.ts`, `useModal.ts`)
+- **Functions**: camelCase (`fetchUrl`, `setContents`)
+- **Constants**: camelCase or UPPER_SNAKE_CASE for true constants
+- **Types/Interfaces**: PascalCase (`FileFormat`, `JsonActions`)
+
+### React Patterns
+
+- **Hooks**: Custom hooks must start with `use` prefix
+- **State management**: Use Zustand stores for global state
+- **Component structure**: Functional components with hooks
+- **Exports**: Named exports for hooks, default exports for stores
+  ```typescript
+  // Hooks
+  export const useFocusNode = () => { ... };
+  
+  // Stores
+  const useFile = create<FileStates & JsonActions>()((set, get) => ({ ... }));
+  export default useFile;
+  ```
+
+### Styled Components
+
+- **Naming**: Prefix with `Styled` (`StyledNavbar`, `StyledMenuItem`)
+- **Props typing**: Use proper TypeScript types
+  ```typescript
+  const StyledMenuItem = styled(Menu.Item)<MenuItemProps & any>`
+    color: black;
+  `;
+  ```
+
+### Error Handling
+
+- **Try-catch blocks**: Use for async operations and data parsing
+- **Error state**: Store errors in state for UI display
+- **User feedback**: Use `react-hot-toast` for user notifications
+  ```typescript
+  try {
+    const json = await contentToJson(contents, format);
+    // ... process
+  } catch (error: any) {
+    if (error?.message) set({ error: error.message });
+    toast.error("Failed to process data!");
+  }
+  ```
+
+### State Management (Zustand)
+
+- **Store structure**: Separate state and actions
+- **Getters**: Provide getter functions for accessing state
+- **Immutability**: Use `set()` to update state
+  ```typescript
+  const useFile = create<FileStates & JsonActions>()((set, get) => ({
+    contents: "",
+    getContents: () => get().contents,
+    setContents: (data) => set({ contents: data }),
+  }));
+  ```
+
+## Project Structure
+
+```
+src/
+├── pages/           # Next.js pages (routing)
+├── features/        # Feature modules (editor, modals, etc.)
+├── layout/          # Layout components (Navbar, Footer, etc.)
+├── hooks/           # Custom React hooks
+├── store/           # Zustand stores (global state)
+├── lib/             # Utility functions and helpers
+├── types/           # TypeScript type definitions
+├── constants/       # Application constants
+├── data/            # Static data files
+├── assets/          # Images and static assets
+└── enums/           # Enumerations
+```
+
+## Best Practices
+
+1. **Performance**: Use debouncing for expensive operations (see `useFocusNode.ts`)
+2. **Session storage**: Store user data in sessionStorage for persistence
+3. **Analytics**: Use `nextjs-google-analytics` for event tracking
+4. **Accessibility**: Follow Mantine's accessibility guidelines
+5. **Code organization**: Keep related code together in feature folders
+6. **Type safety**: Leverage TypeScript's type system fully
+7. **Component composition**: Break down complex components into smaller ones
+8. **Avoid prop drilling**: Use Zustand stores for deeply nested state
+
+## Common Patterns
+
+### Creating a new Zustand store
+```typescript
+import { create } from "zustand";
+
+interface MyState {
+  value: string;
+}
+
+interface MyActions {
+  setValue: (value: string) => void;
+}
+
+const useMyStore = create<MyState & MyActions>()((set, get) => ({
+  value: "",
+  setValue: (value) => set({ value }),
+}));
+
+export default useMyStore;
+```
+
+### Creating a custom hook
+```typescript
+import React from "react";
+import { useDebouncedValue } from "@mantine/hooks";
+
+export const useMyHook = () => {
+  const [value, setValue] = React.useState("");
+  const [debouncedValue] = useDebouncedValue(value, 600);
+  
+  return [value, setValue, debouncedValue] as const;
+};
+```
+
+## Notes for Agents
+
+- This project uses **pnpm** as the package manager (not npm or yarn)
+- Node.js version requirement: **>=24.x**
+- No test suite exists - do not create test files unless explicitly requested
+- The `src/enums` directory is ignored by ESLint
+- All data processing is client-side (privacy-focused)
+- The project uses Next.js with webpack (not Turbopack)
