@@ -10,7 +10,6 @@ import "allotment/dist/style.css";
 import { generateNextSeo } from "next-seo/pages";
 import { SEO } from "../constants/seo";
 import { darkTheme, lightTheme } from "../constants/theme";
-import { Banner } from "../features/Banner";
 import { BottomBar } from "../features/editor/BottomBar";
 import { FullscreenDropzone } from "../features/editor/FullscreenDropzone";
 import { Toolbar } from "../features/editor/Toolbar";
@@ -86,7 +85,7 @@ const EditorPage = () => {
           title: "Editor | JSON Visualization",
           description:
             "JSON Visualization Editor is a tool for visualizing into graphs, analyzing, editing, formatting, querying, transforming and validating JSON, CSV, YAML, XML, and more.",
-          canonical: "https://jsoncrack.com/editor",
+          canonical: "https://jsonvisualization.nguuyen.io.vn/editor",
         })}
       </Head>
       <ThemeProvider theme={darkmodeEnabled ? darkTheme : lightTheme}>

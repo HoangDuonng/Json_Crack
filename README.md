@@ -9,18 +9,10 @@
   <p align="center">
     The open-source JSON Editor.
     <br />
-    <a href="https://jsoncrack.com"><strong>Learn more »</strong></a>
+    <a href="https://jsonvisualization.nguuyen.io.vn"><strong>Learn more »</strong></a>
     <br />
     <br />
-    <a href="https://todiagram.com">ToDiagram</a>
-    ·
-    <a href="https://discord.gg/yVyTtCRueq">Discord</a>
-    ·
-    <a href="https://jsoncrack.com">Website</a>
-    ·
     <a href="https://github.com/HoangDuonng/Json_Visualization/issues">Issues</a>
-    ·
-    <a href="https://marketplace.visualstudio.com/items?itemName=AykutSarac.jsoncrack-vscode">VS Code</a>
   </p>
 </p>
 
@@ -53,13 +45,13 @@ JSON Visualization is a tool for visualizing JSON data in a structured, interact
   />
 </a>
 
-<a href="https://producthunt.com/posts/JSON-Visualization?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-jsoncrack" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=332281&theme=light" alt="JSON Visualization | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<a href="https://producthunt.com/posts/JSON-Visualization?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-json-visualization" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=332281&theme=light" alt="JSON Visualization | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ### Built With
 
-- [Next.js](https://nextjs.org/?ref=jsoncrack.com)
-- [React.js](https://reactjs.org/?ref=jsoncrack.com)
-- [Reaflow](https://reaflow.dev/?ref=jsoncrack.com)
+- [Next.js](https://nextjs.org/)
+- [React.js](https://reactjs.org/)
+- [Reaflow](https://reaflow.dev/)
 - [Monaco Editor](https://github.com/suren-atoyan/monaco-react)
 
 ## Stay Up-to-Date
@@ -94,7 +86,7 @@ Here is what you need to be able to run JSON Visualization.
 2. Go to the project folder
 
    ```sh
-   cd jsoncrack.com
+   cd Json_Visualization
    ```
 
 3. Install packages

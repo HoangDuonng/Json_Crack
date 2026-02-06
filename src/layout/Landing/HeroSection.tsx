@@ -106,7 +106,11 @@ export const HeroSection = ({ stars = 0 }) => {
     <StyledHeroSection>
       <StyledHeroSectionBody>
         <Stack flex="1" miw={250} mx="auto" align="center">
-          <Link href="https://github.com/HoangDuonng/Json_Visualization" target="_blank" rel="noopener">
+          <Link
+            href="https://github.com/HoangDuonng/Json_Visualization"
+            target="_blank"
+            rel="noopener"
+          >
             <Button
               variant="default"
               radius="xl"

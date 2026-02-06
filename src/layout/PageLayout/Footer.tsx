@@ -22,14 +22,6 @@ export const Footer = () => {
               Product
             </Text>
             <Anchor
-              fz="sm"
-              c="gray.5"
-              href="https://marketplace.visualstudio.com/items?itemName=AykutSarac.jsoncrack-vscode"
-              rel="noopener"
-            >
-              VS Code
-            </Anchor>
-            <Anchor
               href="https://github.com/HoangDuonng/Json_Visualization"
               fz="sm"
               c="gray.5"
@@ -37,14 +29,6 @@ export const Footer = () => {
               rel="noopener"
             >
               Open Source
-            </Anchor>
-            <Anchor
-              href="https://todiagram.com?utm_source=jsoncrack&utm_medium=footer"
-              fz="sm"
-              c="gray.5"
-              rel="noopener"
-            >
-              ToDiagram
             </Anchor>
           </Stack>
           <Stack gap="xs">
@@ -80,7 +64,7 @@ export const Footer = () => {
               </Anchor>
               <Anchor
                 aria-label="GitHub"
-                href="https://github.com/HoangDuonng/Json_Visualization"
+                href="https://github.com/HoangDuonng"
                 fz="sm"
                 rel="noopener"
               >

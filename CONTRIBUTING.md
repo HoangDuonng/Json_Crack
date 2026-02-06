@@ -41,7 +41,7 @@ JSON Visualization uses:
 ```bash
 # Clone the repo
 git clone https://github.com/HoangDuonng/Json_Visualization.git
-cd jsoncrack.com
+cd Json_Visualization
 
 # Install dependencies
 pnpm install

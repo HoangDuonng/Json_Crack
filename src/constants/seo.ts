@@ -16,7 +16,7 @@ export const SEO: DefaultSeoProps = {
     ],
   },
   twitter: {
-    handle: "@jsoncrack",
+    handle: "@HoanggDuonng",
     cardType: "summary_large_image",
   },
   additionalLinkTags: [

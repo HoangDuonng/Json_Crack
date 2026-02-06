@@ -44,7 +44,7 @@ const Docs = () => {
           ...SEO,
           title: "Documentation - JSON Visualization",
           description: "Integrate JSON Visualization widgets into your website.",
-          canonical: "https://jsoncrack.com/docs",
+          canonical: "https://jsonvisualization.nguuyen.io.vn/docs",
         })}
       </Head>
       <Stack mx="auto" maw="90%">
@@ -65,10 +65,10 @@ const Docs = () => {
               the editor:{" "}
               <StyledHighlight
                 as="a"
-                href="https://jsoncrack.com/editor?json=https://catfact.ninja/fact"
+                href="https://jsonvisualization.nguuyen.io.vn/editor?json=https://catfact.ninja/fact"
                 $link
               >
-                https://jsoncrack.com/editor?json=https://catfact.ninja/fact
+                https://jsonvisualization.nguuyen.io.vn/editor?json=https://catfact.ninja/fact
               </StyledHighlight>
             </Text>
 
