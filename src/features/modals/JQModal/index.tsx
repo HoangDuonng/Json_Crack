@@ -12,8 +12,8 @@ export const JQModal = ({ opened, onClose }: ModalProps) => {
     <Modal title="JSON Query" size="lg" opened={opened} onClose={onClose} centered>
       <Stack>
         <Text fz="sm">
-          jq is a lightweight and flexible command-line JSON processor. JSON Crash uses simplified
-          version of jq, not all features are supported.
+          jq is a lightweight and flexible command-line JSON processor. JSON Visualization uses
+          simplified version of jq, not all features are supported.
           <br />
           <Anchor
             fz="sm"

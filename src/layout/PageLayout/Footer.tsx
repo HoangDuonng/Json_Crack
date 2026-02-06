@@ -30,7 +30,7 @@ export const Footer = () => {
               VS Code
             </Anchor>
             <Anchor
-              href="https://github.com/AykutSarac/jsoncrack.com"
+              href="https://github.com/HoangDuonng/Json_Visualization"
               fz="sm"
               c="gray.5"
               target="_blank"
@@ -80,7 +80,7 @@ export const Footer = () => {
               </Anchor>
               <Anchor
                 aria-label="GitHub"
-                href="https://github.com/AykutSarac/jsoncrack.com"
+                href="https://github.com/HoangDuonng/Json_Visualization"
                 fz="sm"
                 rel="noopener"
               >
@@ -104,7 +104,7 @@ export const Footer = () => {
       </Flex>
       <Flex gap="xl">
         <Text fz="sm" c="dimmed">
-          © {new Date().getFullYear()} JSON Crack
+          © {new Date().getFullYear()} JSON Visualization
         </Text>
         <Anchor component={Link} prefetch={false} fz="sm" c="dimmed" href="/legal/terms">
           <Text fz="sm" c="dimmed">

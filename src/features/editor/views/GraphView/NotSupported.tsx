@@ -72,7 +72,7 @@ export const NotSupported = () => {
           Time to upgrade!
         </Text>
         <Text ta="center" size="lg" fw={500} c="gray" maw="600">
-          This diagram is too large and not supported at JSON Crack.
+          This diagram is too large and not supported at JSON Visualization.
           <br />
           Try{" "}
           <Anchor

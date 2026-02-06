@@ -9,7 +9,7 @@ import Layout from "../layout/PageLayout";
 const NotFound = () => {
   return (
     <Layout>
-      <Head>{generateNextSeo({ ...SEO, title: "404 | JSON Crack", noindex: true })}</Head>
+      <Head>{generateNextSeo({ ...SEO, title: "404 | JSON Visualization", noindex: true })}</Head>
       <Stack mt={100} justify="center" align="center">
         <Title fz={150} style={{ fontFamily: "monospace" }}>
           404

@@ -8,7 +8,7 @@ export const BANNER_HEIGHT =
 
 const BANNER_LIST = [
   "Save and store your diagrams with ToDiagram",
-  "Explore the ToDiagram from the creators of JSON Crack",
+  "Explore the ToDiagram from the creators of JSON Visualization",
   "Generate AI diagrams with single prompt",
   "Try ToDiagram for free, no sign-up required",
   "Edit data directly inside diagrams",

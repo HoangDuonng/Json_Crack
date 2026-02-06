@@ -45,7 +45,7 @@ export const Toolbar = () => {
   return (
     <StyledTools>
       <Group gap="xs" justify="left" w="100%" style={{ flexWrap: "nowrap" }}>
-        <StyledToolElement title="JSON Crack">
+        <StyledToolElement title="JSON Visualization">
           <Flex gap="xs" align="center" justify="center">
             <JSONCrackLogo fontSize="14px" hideLogo />
           </Flex>

@@ -91,7 +91,7 @@ export const BottomBar = () => {
   };
 
   React.useEffect(() => {
-    if (data?.name) window.document.title = `${data.name} | JSON Crack`;
+    if (data?.name) window.document.title = `${data.name} | JSON Visualization`;
   }, [data]);
 
   return (

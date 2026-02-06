@@ -15,7 +15,7 @@ import Layout from "../layout/PageLayout";
 export const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
-      <Head>{generateNextSeo({ ...SEO, canonical: "https://jsoncrack.com" })}</Head>
+      <Head>{generateNextSeo({ ...SEO, canonical: "https://nguuyen.io.vn" })}</Head>
       <HeroSection stars={props.stars} />
       <HeroPreview />
       <Section1 />
@@ -31,7 +31,7 @@ export default HomePage;
 
 export const getStaticProps = (async () => {
   try {
-    const res = await fetch("https://api.github.com/repos/AykutSarac/jsoncrack.com");
+    const res = await fetch("https://api.github.com/repos/HoangDuonng/Json_Visualization");
     const data = await res.json();
 
     return {

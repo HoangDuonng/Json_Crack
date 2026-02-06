@@ -1,4 +1,4 @@
-# Contributing to JSON Crack
+# Contributing to JSON Visualization
 
 Thank you for wanting to contribute! This is a community-driven project, and we appreciate your help. Please read this guide carefully to make the review process smooth and fast.
 
@@ -23,20 +23,24 @@ This workflow prevents duplicate work and ensures your contribution aligns with 
 ## Quick Setup
 
 ### Prerequisites
+
 - Node.js 18+
 - pnpm (or npm/yarn)
 
 ### Tech Stack
-JSON Crack uses:
+
+JSON Visualization uses:
+
 - **React** — UI library
 - **Reaflow** — Graph visualization
 - **Mantine UI** — UI components
 - **Zustand** — State management
 
 ### Get Started
+
 ```bash
 # Clone the repo
-git clone https://github.com/AykutSarac/jsoncrack.com.git
+git clone https://github.com/HoangDuonng/Json_Visualization.git
 cd jsoncrack.com
 
 # Install dependencies
@@ -53,6 +57,7 @@ The app will be available at `http://localhost:3000`
 ## How to Submit a Pull Request
 
 ### Requirements
+
 Before submitting, make sure your PR includes:
 
 1. **Issue ID** — Reference the issue: `Closes #123`
@@ -64,6 +69,7 @@ Before submitting, make sure your PR includes:
 5. **Follow code style** — Use [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html)
 
 ### Creating Your Branch
+
 ```bash
 git checkout -b fix/issue-123-description
 # or
@@ -77,16 +83,19 @@ Use clear branch names that reference the issue.
 ## Guidelines
 
 ### Performance First
+
 - Avoid unnecessary re-renders
 - Use React DevTools Profiler to check performance
 - Test with large JSON files to ensure no slowdowns
 
 ### Code Quality
+
 - Follow the [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html)
 - Write descriptive commit messages
 - Keep changes focused — one feature/fix per PR
 
 ### Testing
+
 - Manually test your changes thoroughly
 - Describe exactly how you tested it in the PR
 - Make sure existing features still work
@@ -100,6 +109,7 @@ Here's what a good PR looks like:
 **Title:** Add JSON validation tooltip on parse error
 
 **Description:**
+
 ```
 Closes #234
 
@@ -126,4 +136,4 @@ No performance impact. Tooltip renders conditionally only on errors.
 - Have an idea? Open an issue
 - Confused about something? Comment on the issue
 
-Thank you for contributing to JSON Crack! 🎉
+Thank you for contributing to JSON Visualization! 🎉

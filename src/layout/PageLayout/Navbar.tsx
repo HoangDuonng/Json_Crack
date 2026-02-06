@@ -92,7 +92,7 @@ export const Navbar = () => {
           </Button>
           <Button
             component="a"
-            href="https://github.com/AykutSarac/jsoncrack.com"
+            href="https://github.com/HoangDuonng/Json_Visualization"
             target="_blank"
             variant="subtle"
             color="black"

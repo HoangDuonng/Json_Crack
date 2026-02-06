@@ -81,7 +81,7 @@ function JsonCrack({ Component, pageProps }: AppProps) {
     <>
       <Head>{generateDefaultSeo(SEO)}</Head>
       <SoftwareApplicationJsonLd
-        name="JSON Crash"
+        name="JSON Visualization"
         type="SoftwareApplication"
         operatingSystem="Browser"
         applicationCategory="DeveloperApplication"

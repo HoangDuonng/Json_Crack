@@ -43,7 +43,7 @@ export const FullscreenDropzone = () => {
         <Dropzone.Accept>
           <VscFiles size={100} />
           <Text fz="h1" fw={500} mt="lg">
-            Upload to JSON Crash
+            Upload to JSON Visualization
           </Text>
           <Text fz="lg" c="dimmed" mt="sm">
             (Max file size: 300 KB)

@@ -9,7 +9,7 @@ export const HeroPreview = () => {
         loading="eager"
         maw={1036}
         mx="auto"
-        alt="JSON Crack editor preview"
+        alt="JSON Visualization editor preview"
         style={{
           borderRadius: 10,
           overflow: "hidden",

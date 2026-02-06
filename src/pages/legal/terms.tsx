@@ -12,8 +12,8 @@ const Terms = () => {
       <Head>
         {generateNextSeo({
           ...SEO,
-          title: "Terms of Service - JSON Crash",
-          description: "JSON Crash Terms of Service",
+          title: "Terms of Service - JSON Visualization",
+          description: "JSON Visualization Terms of Service",
           canonical: "https://nguuyen.io.vn",
         })}
       </Head>

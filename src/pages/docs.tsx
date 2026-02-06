@@ -42,8 +42,8 @@ const Docs = () => {
       <Head>
         {generateNextSeo({
           ...SEO,
-          title: "Documentation - JSON Crack",
-          description: "Integrate JSON Crack widgets into your website.",
+          title: "Documentation - JSON Visualization",
+          description: "Integrate JSON Visualization widgets into your website.",
           canonical: "https://jsoncrack.com/docs",
         })}
       </Head>

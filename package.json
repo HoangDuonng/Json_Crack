@@ -1,15 +1,15 @@
 {
-  "name": "json-crack",
+  "name": "json-visualization",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": {
-    "name": "Aykut Saraç",
-    "email": "aykutsarac0@gmail.com"
+    "name": "Hoang Duong",
+    "email": "nguuyen1801@gmail.com"
   },
   "license": "Apache-2.0",
-  "homepage": "https://jsoncrack.com",
+  "homepage": "https://nguuyen.io.vn",
   "bugs": {
-    "url": "https://github.com/AykutSarac/jsoncrack.com/issues"
+    "url": "https://github.com/HoangDuonng/Json_Visualization/issues"
   },
   "scripts": {
     "dev": "next dev --webpack",

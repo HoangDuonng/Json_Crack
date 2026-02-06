@@ -18,7 +18,7 @@ const ExternalMode = () => {
 
   return (
     <Modal
-      title="Thanks for using JSON Crack"
+      title="Thanks for using JSON Visualization"
       opened={isExternal}
       onClose={() => setExternal(false)}
       centered
@@ -62,7 +62,7 @@ const ExternalMode = () => {
             <Accordion.Panel>
               Read the full license terms on{" "}
               <Anchor
-                href="https://github.com/AykutSarac/jsoncrack.com/blob/main/LICENSE.md"
+                href="https://github.com/HoangDuonng/Json_Visualization/blob/main/LICENSE.md"
                 rel="noopener"
                 target="_blank"
               >
@@ -76,7 +76,7 @@ const ExternalMode = () => {
             <Accordion.Panel>
               You can report bugs or request features by opening an issue on our{" "}
               <Anchor
-                href="https://github.com/AykutSarac/jsoncrack.com/issues"
+                href="https://github.com/HoangDuonng/Json_Visualization/issues"
                 rel="noopener"
                 target="_blank"
               >
@@ -93,7 +93,7 @@ const ExternalMode = () => {
             <Accordion.Panel>
               We welcome contributions! Visit our{" "}
               <Anchor
-                href="https://github.com/AykutSarac/jsoncrack.com"
+                href="https://github.com/HoangDuonng/Json_Visualization"
                 rel="noopener"
                 target="_blank"
               >
@@ -101,7 +101,7 @@ const ExternalMode = () => {
               </Anchor>{" "}
               and read the{" "}
               <Anchor
-                href="https://github.com/AykutSarac/jsoncrack.com/blob/main/CONTRIBUTING.md"
+                href="https://github.com/HoangDuonng/Json_Visualization/blob/main/CONTRIBUTING.md"
                 rel="noopener"
                 target="_blank"
               >
@@ -112,12 +112,12 @@ const ExternalMode = () => {
           </Accordion.Item>
           <Accordion.Item value="6">
             <Accordion.Control>
-              What is the difference between JSON Crack and ToDiagram?
+              What is the difference between JSON Visualization and ToDiagram?
             </Accordion.Control>
             <Accordion.Panel>
-              JSON Crack is a free and open-source tool for visualizing JSON data. ToDiagram is the
-              professional version that offers advanced features, higher limits, and the ability to
-              edit data directly from diagrams. You can learn more or upgrade at{" "}
+              JSON Visualization is a free and open-source tool for visualizing JSON data. ToDiagram
+              is the professional version that offers advanced features, higher limits, and the
+              ability to edit data directly from diagrams. You can learn more or upgrade at{" "}
               <Anchor
                 href="https://todiagram.com?utm_source=jsoncrack&utm_medium=external-mode"
                 rel="noopener"
@@ -132,7 +132,7 @@ const ExternalMode = () => {
       </Group>
       <Flex justify="center" align="center" gap="sm" mt="md">
         <Anchor
-          href="https://github.com/AykutSarac/jsoncrack.com"
+          href="https://github.com/HoangDuonng/Json_Visualization"
           rel="noopener"
           target="_blank"
           fz="sm"

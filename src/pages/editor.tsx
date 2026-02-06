@@ -83,9 +83,9 @@ const EditorPage = () => {
       <Head>
         {generateNextSeo({
           ...SEO,
-          title: "Editor | JSON Crash",
+          title: "Editor | JSON Visualization",
           description:
-            "JSON Crash Editor is a tool for visualizing into graphs, analyzing, editing, formatting, querying, transforming and validating JSON, CSV, YAML, XML, and more.",
+            "JSON Visualization Editor is a tool for visualizing into graphs, analyzing, editing, formatting, querying, transforming and validating JSON, CSV, YAML, XML, and more.",
           canonical: "https://jsoncrack.com/editor",
         })}
       </Head>

@@ -1,14 +1,15 @@
-# Agent Guidelines for JSON Crack
+# Agent Guidelines for JSON Visualization
 
-This document provides guidelines for AI coding agents working in the JSON Crack codebase.
+This document provides guidelines for AI coding agents working in the JSON Visualization codebase.
 
 ## Project Overview
 
-JSON Crack is a Next.js application for visualizing and manipulating JSON data. It uses React 19, TypeScript, Zustand for state management, styled-components for styling, and Mantine v8 for UI components.
+JSON Visualization is a Next.js application for visualizing and manipulating JSON data. It uses React 19, TypeScript, Zustand for state management, styled-components for styling, and Mantine v8 for UI components.
 
 ## Build & Development Commands
 
 ### Development
+
 ```bash
 pnpm dev              # Start development server on http://localhost:3000
 pnpm build            # Build for production
@@ -16,15 +17,18 @@ pnpm start            # Start production server
 ```
 
 ### Linting & Formatting
+
 ```bash
 pnpm lint             # Run TypeScript check, ESLint, and Prettier
 pnpm lint:fix         # Auto-fix linting issues
 ```
 
 ### Testing
+
 **Note**: This project currently has no test suite. Do not attempt to run tests.
 
 ### Other Commands
+
 ```bash
 pnpm analyze          # Analyze bundle size
 ```
@@ -35,19 +39,21 @@ pnpm analyze          # Analyze bundle size
 
 - **Strict mode enabled**: All TypeScript strict checks are enforced
 - **Type imports**: Always use `import type` for type-only imports (enforced by ESLint)
+
   ```typescript
   // ✅ Correct
   import type { MenuItemProps } from "@mantine/core";
-  
   // ❌ Wrong
   import { MenuItemProps } from "@mantine/core";
   ```
+
 - **No implicit any**: Avoid `any` types when possible (though `@typescript-eslint/no-explicit-any` is off)
 - **Type definitions**: Define interfaces for component props, store states, and function parameters
 
 ### Import Order
 
 Imports must follow this specific order (enforced by Prettier plugin):
+
 1. React imports (`react`, `react/*`)
 2. Next.js imports (`next`, `next/*`)
 3. `@mantine/core`
@@ -58,6 +64,7 @@ Imports must follow this specific order (enforced by Prettier plugin):
 8. Relative imports (`./`, `../`)
 
 Example:
+
 ```typescript
 import React from "react";
 import Link from "next/link";
@@ -82,7 +89,7 @@ import { isIframe } from "../lib/utils/helpers";
 ### Naming Conventions
 
 - **Components**: PascalCase (`Navbar`, `JSONCrackLogo`)
-- **Files**: 
+- **Files**:
   - ComponentsalCase (`Navbar.tsx`, `HeroSection.tsx`)
   - Utilities: camelCase (`helpers.ts`, `search.ts`)
   - Hooks: camelCase with `use` prefix (`useFocusNode.ts`, `useFile.ts`)
@@ -97,10 +104,11 @@ import { isIframe } from "../lib/utils/helpers";
 - **State management**: Use Zustand stores for global state
 - **Component structure**: Functional components with hooks
 - **Exports**: Named exports for hooks, default exports for stores
+
   ```typescript
   // Hooks
   export const useFocusNode = () => { ... };
-  
+
   // Stores
   const useFile = create<FileStates & JsonActions>()((set, get) => ({ ... }));
   export default useFile;
@@ -140,7 +148,7 @@ import { isIframe } from "../lib/utils/helpers";
   const useFile = create<FileStates & JsonActions>()((set, get) => ({
     contents: "",
     getContents: () => get().contents,
-    setContents: (data) => set({ contents: data }),
+    setContents: data => set({ contents: data }),
   }));
   ```
 
@@ -175,6 +183,7 @@ src/
 ## Common Patterns
 
 ### Creating a new Zustand store
+
 ```typescript
 import { create } from "zustand";
 
@@ -188,13 +197,14 @@ interface MyActions {
 
 const useMyStore = create<MyState & MyActions>()((set, get) => ({
   value: "",
-  setValue: (value) => set({ value }),
+  setValue: value => set({ value }),
 }));
 
 export default useMyStore;
 ```
 
 ### Creating a custom hook
+
 ```typescript
 import React from "react";
 import { useDebouncedValue } from "@mantine/hooks";
@@ -202,7 +212,7 @@ import { useDebouncedValue } from "@mantine/hooks";
 export const useMyHook = () => {
   const [value, setValue] = React.useState("");
   const [debouncedValue] = useDebouncedValue(value, 600);
-  
+
   return [value, setValue, debouncedValue] as const;
 };
 ```

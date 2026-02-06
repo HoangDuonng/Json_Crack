@@ -52,7 +52,7 @@ export const PageLinks = () => {
             border: "none",
           }}
         >
-          Open JSON Crash
+          Open JSON Visualization
         </Button>
       </Stack>
       <SimpleGrid cols={4} w="fit-content">

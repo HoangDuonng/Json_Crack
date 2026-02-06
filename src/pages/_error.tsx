@@ -14,7 +14,7 @@ const Custom500 = () => {
       <Head>
         {generateNextSeo({
           ...SEO,
-          title: "Unexpected Error Occurred | JSON Crack",
+          title: "Unexpected Error Occurred | JSON Visualization",
         })}
       </Head>
       <Stack mt={100} justify="center" align="center">

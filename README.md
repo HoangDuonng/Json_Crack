@@ -1,10 +1,10 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <a href="https://github.com/AykutSarac/jsoncrack.com">
+  <a href="https://github.com/HoangDuonng/Json_Visualization">
    <img src="./public/assets/192.png" height="50" alt="Logo">
   </a>
 
-  <h1 align="center">JSON Crack</h1>
+  <h1 align="center">JSON Visualization</h1>
 
   <p align="center">
     The open-source JSON Editor.
@@ -18,7 +18,7 @@
     ·
     <a href="https://jsoncrack.com">Website</a>
     ·
-    <a href="https://github.com/AykutSarac/jsoncrack.com/issues">Issues</a>
+    <a href="https://github.com/HoangDuonng/Json_Visualization/issues">Issues</a>
     ·
     <a href="https://marketplace.visualstudio.com/items?itemName=AykutSarac.jsoncrack-vscode">VS Code</a>
   </p>
@@ -32,16 +32,16 @@
 
 ## Visualize JSON into interactive graphs
 
-JSON Crack is a tool for visualizing JSON data in a structured, interactive graphs, making it easier to explore, format, and validate JSON. It offers features like converting JSON to other formats (CSV, YAML), generating JSON Schema, executing queries, and exporting visualizations as images. Designed for both readability and usability.
+JSON Visualization is a tool for visualizing JSON data in a structured, interactive graphs, making it easier to explore, format, and validate JSON. It offers features like converting JSON to other formats (CSV, YAML), generating JSON Schema, executing queries, and exporting visualizations as images. Designed for both readability and usability.
 
-* **Visualizer**: Instantly convert JSON, YAML, CSV, XML, and TOML into interactive graphs or trees in dark or light mode.
-* **Convert**: Seamlessly transform data formats, like JSON to CSV or XML to JSON, for easy sharing.
-* **Format & Validate**: Beautify and validate JSON, YAML, and CSV for clear and accurate data.
-* **Code Generation**: Generate TypeScript interfaces, Golang structs, and JSON Schema.
-* **JSON Schema**: Create JSON Schema, mock data, and validate various data formats.
-* **Advanced Tools**: Decode JWT, randomize data, and run jq or JSON path queries.
-* **Export Image**: Download your visualization as PNG, JPEG, or SVG.
-* **Privacy**: All data processing is local; nothing is stored on our servers.
+- **Visualizer**: Instantly convert JSON, YAML, CSV, XML, and TOML into interactive graphs or trees in dark or light mode.
+- **Convert**: Seamlessly transform data formats, like JSON to CSV or XML to JSON, for easy sharing.
+- **Format & Validate**: Beautify and validate JSON, YAML, and CSV for clear and accurate data.
+- **Code Generation**: Generate TypeScript interfaces, Golang structs, and JSON Schema.
+- **JSON Schema**: Create JSON Schema, mock data, and validate various data formats.
+- **Advanced Tools**: Decode JWT, randomize data, and run jq or JSON path queries.
+- **Export Image**: Download your visualization as PNG, JPEG, or SVG.
+- **Privacy**: All data processing is local; nothing is stored on our servers.
 
 ## Recognition
 
@@ -53,7 +53,7 @@ JSON Crack is a tool for visualizing JSON data in a structured, interactive grap
   />
 </a>
 
-<a href="https://producthunt.com/posts/JSON-Crack?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-jsoncrack" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=332281&theme=light" alt="JSON Crack | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<a href="https://producthunt.com/posts/JSON-Visualization?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-jsoncrack" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=332281&theme=light" alt="JSON Visualization | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ### Built With
 
@@ -64,9 +64,9 @@ JSON Crack is a tool for visualizing JSON data in a structured, interactive grap
 
 ## Stay Up-to-Date
 
-JSON Crack officially launched as v1.0 on the 17th of February 2022 and we've come a long way so far. Watch **releases** of this repository to be notified of future updates:
+JSON Visualization officially launched as v1.0 on the 17th of February 2022 and we've come a long way so far. Watch **releases** of this repository to be notified of future updates:
 
-<a href="https://github.com/AykutSarac/jsoncrack.com"><img src="https://img.shields.io/github/stars/AykutSarac/jsoncrack.com" alt="Star at GitHub" /></a>
+<a href="https://github.com/HoangDuonng/Json_Visualization"><img src="https://img.shields.io/github/stars/HoangDuonng/Json_Visualization" alt="Star at GitHub" /></a>
 
 <!-- GETTING STARTED -->
 
@@ -76,20 +76,19 @@ To get a local copy up and running, please follow these simple steps.
 
 ### Prerequisites
 
-Here is what you need to be able to run JSON Crack.
+Here is what you need to be able to run JSON Visualization.
 
 - Node.js (Version: >=18.x)
 - Pnpm _(recommended)_
-
 
 ## Development
 
 ### Setup
 
-1. Clone the repo into a public GitHub repository (or fork https://github.com/AykutSarac/jsoncrack.com/fork). If you plan to distribute the code, read the [`LICENSE`](/LICENSE.md) for additional details.
+1. Clone the repo into a public GitHub repository (or fork https://github.com/HoangDuonng/Json_Visualization/fork). If you plan to distribute the code, read the [`LICENSE`](/LICENSE.md) for additional details.
 
    ```sh
-   git clone https://github.com/AykutSarac/jsoncrack.com.git
+   git clone https://github.com/HoangDuonng/Json_Visualization.git
    ```
 
 2. Go to the project folder
@@ -115,7 +114,7 @@ Here is what you need to be able to run JSON Crack.
 ### Docker
 
 🐳 A [`Dockerfile`](Dockerfile) is provided in the root of the repository.
-If you want to run JSON Crack locally:
+If you want to run JSON Visualization locally:
 
 ```console
 # Build a Docker image with:
