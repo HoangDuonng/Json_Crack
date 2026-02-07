@@ -96,18 +96,102 @@ const StyledCopyright = styled(Text)`
   color: #999999;
 `;
 
-const StyledSocialLinks = styled.div`
+const StyledSocialLinks = styled.ul`
   display: flex;
   gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .icon-content {
+    position: relative;
+  }
+
+  .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -45px;
+  }
 `;
 
 const StyledSocialLink = styled.a`
-  color: #666666;
-  transition: color 0.2s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 
   &:hover {
-    color: #1a1a1a;
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+    color: white;
+  }
+
+  svg {
+    position: relative;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+  }
+
+  .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover .filled {
+    height: 100%;
+  }
+
+  &[data-social="linkedin"] .filled {
+    background-color: #0274b3;
+  }
+
+  &[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+  }
+
+  &[data-social="github"] .filled {
+    background-color: #24262a;
+  }
+
+  &[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+  }
+
+  &[data-social="twitter"] .filled {
+    background-color: #000000;
+  }
+
+  &[data-social="twitter"] ~ .tooltip {
+    background-color: #000000;
   }
 `;
 
@@ -161,27 +245,42 @@ export const Footer: React.FC<FooterProps> = ({ stars = 0 }) => {
             <StyledFooterSection>
               <StyledFooterTitle>Community</StyledFooterTitle>
               <StyledSocialLinks>
-                <StyledSocialLink
-                  aria-label="LinkedIn"
-                  href="https://www.linkedin.com/in/hoangduonng/"
-                  rel="noopener"
-                >
-                  <FaLinkedin size={20} />
-                </StyledSocialLink>
-                <StyledSocialLink
-                  aria-label="X"
-                  href="https://x.com/HoanggDuonng"
-                  rel="noopener"
-                >
-                  <FaXTwitter size={20} />
-                </StyledSocialLink>
-                <StyledSocialLink
-                  aria-label="GitHub"
-                  href="https://github.com/HoangDuonng"
-                  rel="noopener"
-                >
-                  <FaGithub size={20} />
-                </StyledSocialLink>
+                <li className="icon-content">
+                  <StyledSocialLink
+                    aria-label="LinkedIn"
+                    href="https://www.linkedin.com/in/hoangduonng/"
+                    rel="noopener"
+                    data-social="linkedin"
+                  >
+                    <div className="filled" />
+                    <FaLinkedin size={18} />
+                  </StyledSocialLink>
+                  <div className="tooltip">LinkedIn</div>
+                </li>
+                <li className="icon-content">
+                  <StyledSocialLink
+                    aria-label="X"
+                    href="https://x.com/HoanggDuonng"
+                    rel="noopener"
+                    data-social="twitter"
+                  >
+                    <div className="filled" />
+                    <FaXTwitter size={18} />
+                  </StyledSocialLink>
+                  <div className="tooltip">X (Twitter)</div>
+                </li>
+                <li className="icon-content">
+                  <StyledSocialLink
+                    aria-label="GitHub"
+                    href="https://github.com/HoangDuonng"
+                    rel="noopener"
+                    data-social="github"
+                  >
+                    <div className="filled" />
+                    <FaGithub size={18} />
+                  </StyledSocialLink>
+                  <div className="tooltip">GitHub</div>
+                </li>
               </StyledSocialLinks>
             </StyledFooterSection>
           </StyledFooterRight>
