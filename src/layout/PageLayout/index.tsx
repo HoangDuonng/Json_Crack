@@ -6,6 +6,9 @@ import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 
 const SplashCursor = dynamic(() => import("../../components/Cursor"), { ssr: false });
+const DotGrid = dynamic(() => import("../../components/DotGrid").then(mod => mod.DotGrid), {
+  ssr: false,
+});
 
 const StyledLayoutWrapper = styled.div`
   background: #fff;
@@ -27,7 +30,8 @@ const PageLayout = ({ children, stars = 0 }: React.PropsWithChildren<{ stars?: n
   return (
     <ThemeProvider theme={lightTheme}>
       <StyledLayoutWrapper>
-        <SplashCursor />
+        <DotGrid dotSize={2} gap={20} baseColor="#e0e0e0" activeColor="#f7c948" proximity={100} />
+        {/* <SplashCursor /> */}
         <Navbar />
         <ContentWrapper>{children}</ContentWrapper>
         <Footer stars={stars} />
