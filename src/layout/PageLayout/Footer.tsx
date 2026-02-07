@@ -234,10 +234,10 @@ export const Footer: React.FC<FooterProps> = ({ stars = 0 }) => {
 
             <StyledFooterSection>
               <StyledFooterTitle>Resources</StyledFooterTitle>
-              <Link href="/#faq" prefetch={false}>
+              <Link href="/#faq" prefetch={false} passHref legacyBehavior>
                 <StyledFooterLink>FAQ</StyledFooterLink>
               </Link>
-              <Link href="/docs" prefetch={false}>
+              <Link href="/docs" prefetch={false} passHref legacyBehavior>
                 <StyledFooterLink>Docs</StyledFooterLink>
               </Link>
             </StyledFooterSection>
@@ -291,10 +291,10 @@ export const Footer: React.FC<FooterProps> = ({ stars = 0 }) => {
             © {new Date().getFullYear()} JSON Visualization. All rights reserved.
           </StyledCopyright>
           <Flex gap="xl">
-            <Link href="/legal/terms" prefetch={false}>
+            <Link href="/legal/terms" prefetch={false} passHref legacyBehavior>
               <StyledFooterLink>Terms</StyledFooterLink>
             </Link>
-            <Link href="/legal/privacy" prefetch={false}>
+            <Link href="/legal/privacy" prefetch={false} passHref legacyBehavior>
               <StyledFooterLink>Privacy</StyledFooterLink>
             </Link>
           </Flex>

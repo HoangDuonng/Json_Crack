@@ -1,6 +1,5 @@
-import React from "react";
+import Link from "next/link";
 import {
-  Button,
   Container,
   Flex,
   Image,
@@ -13,6 +12,7 @@ import {
 } from "@mantine/core";
 import styled from "styled-components";
 import { LuBadgeCheck } from "react-icons/lu";
+import { ExploreButton } from "../../components/ExploreButton";
 
 const StyledDottedContainer = styled.div`
   position: relative;
@@ -112,17 +112,9 @@ export const Section2 = () => {
               <List.Item>Export Image</List.Item>
             </SimpleGrid>
           </List>
-          <Button
-            component="a"
-            href="/editor"
-            color="#202842"
-            size="lg"
-            radius="md"
-            w="fit-content"
-            mt="sm"
-          >
-            Open JSON Editor
-          </Button>
+          <Link href="/editor">
+            <ExploreButton>Open JSON Editor</ExploreButton>
+          </Link>
         </Stack>
         <StyledDottedContainer>
           <Image className="jc" src="/assets/diagram.svg" alt="diagram" loading="lazy" />
